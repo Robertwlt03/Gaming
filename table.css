@@ -100,18 +100,6 @@ td
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-/* ---------------------------------------------- Responsive ---------------------------------------------- */
-@media only screen and (max-width: 1050px)
-{
-    /* 2. BreakPoint: */
-    .inputField
-    {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-}
-
 /* ---------------------------------------------- Fontawesome ---------------------------------------------- */
 th .fa-magnifying-glass
 {
