@@ -31,6 +31,24 @@ body
     color: inherit;
 }
 
+.exit{
+    font-size: 1.2em;
+    border: 1px solid rgb(87, 166, 50);
+    border-radius: 20px;
+    color: rgb(87, 166, 50);
+    padding: 3px 4px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transition: 0.2s ease-in-out;
+}
+
+.exit:hover{
+    background-color: rgb(87, 166, 50);
+    color: white;
+    transition: 0.2s ease-in-out;
+}
+
 /* ---------------------------------------------- TableHead ---------------------------------------------- */
 table
 {
