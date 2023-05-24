@@ -19,7 +19,7 @@ a {
 
 /* ------------------------------------------------- Navbar ------------------------------------------------- */
 nav {
-  z-index: 99;
+  z-index: 50;
   width: 30px;
   height: 100vh;
   padding-top: 30px;
@@ -36,6 +36,7 @@ nav {
 nav:hover {
   width: 200px;
   transition: 0.5s ease-in-out;
+  transition-delay: 0.4s;
 }
 
 .nav-button {
@@ -59,6 +60,7 @@ nav:hover {
 nav:hover .link > a > i {
   transform: scale(90%);
   transition: 0.2s ease-in-out;
+  transition-delay: 0.4s;
 }
 
 .link {
@@ -96,6 +98,7 @@ nav .link-titel div {
 nav:hover .link-titel div {
   opacity: 1;
   transition: 0.4s ease-in-out;
+  transition-delay: 0.4s;
 }
 
 /*? ------------------------------ Soziale Medien ------------------------------ */
@@ -103,7 +106,7 @@ nav:hover .link-titel div {
   width: 100%;
   font-size: 1.7em;
   position: absolute;
-  bottom: 70px;
+  bottom: 90px;
   left: 0;
   opacity: 0;
   transition: 0.4s ease-in-out;
@@ -116,6 +119,7 @@ nav:hover .link-titel div {
 nav:hover .social-links{
   opacity: 1;
   transition: 0.4s ease-in-out;
+  transition-delay: 0.4s;
 }
 
 /* ------------------------------------------------- Fontawesome ------------------------------------------------- */
@@ -128,6 +132,7 @@ nav:hover .social-links{
 nav:hover:hover .fa-bars {
   opacity: 0;
   transition: 0.2s ease-in-out;
+  transition-delay: 0.4s;
 }
 
 .fa-xmark {
@@ -138,14 +143,93 @@ nav:hover:hover .fa-bars {
 nav:hover .fa-xmark {
   opacity: 1;
   transition: 0.2s ease-in-out;
+  transition-delay: 0.4s;
+}
+
+/* ------------------------------------------------- Darkmode ------------------------------------------------- */
+.background-switch-darkmode {
+  z-index: 51;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  min-height: 40px;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.452);
+  backdrop-filter: blur(28px) saturate(67%);
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(0,0,0,.15);
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  transition: 0.1s ease-in-out;
+}
+
+.background-switch-darkmode:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.397);
+  transition: 0.1s ease-in-out;
+}
+
+.switch-darkmode{
+  border-radius: 25px;
+  width: 100%;
+  height: fit-content;
+  border: 2px solid black;
+  padding: 2px;
+  transition: 0.1s ease-in-out;
+}
+
+.switch-circle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10px;
+  min-width: 10px;
+  height: 10px;
+  min-height: 10px;
+  padding: 3px;
+  border-radius: 50%;
+  color: white;
+  background-color: black;
+}
+
+.switch-circle > i {
+  font-size: 12px;
+}
+
+.background-switch-darkmode:hover .switch-circle{
+  animation-name: slide-to-right-hover;
+  animation-duration: 0.1s;
+  animation-fill-mode: forwards;
 }
 
 /* ------------------------------------------------- Extra ------------------------------------------------- */
-.flex-center-vertical-horizontal{
+.flex-center-vertical-horizontal {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+@keyframes slide-to-right-hover {
+  0%   {transform: translateX(0%);}
+  100% {transform: translateX(10%);}
+}
+
+@keyframes slide-to-right-click {
+  0%   {transform: translateX(0%);}
+  100% {transform: translateX(100%);}
+}
+
+@keyframes rainbow {
+  0%   {background-color: red;}
+  25%  {background-color: yellow;}
+  50%  {background-color: blue;}
+  100% {background-color: green;}
+}
+
+  /*TODO animation: name 2s infinite;;
 
 /* ------------------------------------------------- Responsive ------------------------------------------------- */
 @media only screen and (max-width: 1050px)
@@ -170,6 +254,7 @@ nav:hover .fa-xmark {
 
     nav:hover {
       width: 100%;
+      transition-delay: 0.4s;
     }
 
     .small-navbar {
@@ -211,6 +296,7 @@ nav:hover .fa-xmark {
     nav:hover .link-background {
     top: 0;
     transition: 0.5s ease-in-out;
+    transition-delay: 0.4s;
     }
 
     .link-wrapper{
@@ -242,20 +328,4 @@ nav:hover .fa-xmark {
     .social-links{
       bottom: 130px;
     }
-}
-
-.nav-unhover{
-  z-index: 99;
-  width: 30px;
-  height: 100vh;
-  padding-top: 30px;
-  padding-right: 20px;
-  padding-left: 20px;
-  position: fixed;
-  overflow-y: hidden;
-  box-shadow: 4px 0 16px 0 rgba(0,0,0,.16);
-  background: transparent linear-gradient(-45deg,rgba(255, 255, 255, 0.3),rgba(255, 255, 255, 0.6));
-  backdrop-filter: blur(28px) saturate(67%);
-  transition: 0.5s ease-in-out;
-  pointer-events: none;
 }
