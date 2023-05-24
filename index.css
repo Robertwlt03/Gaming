@@ -28,7 +28,7 @@ nav {
   position: fixed;
   overflow-y: hidden;
   box-shadow: 4px 0 16px 0 rgba(0,0,0,.16);
-  background: transparent linear-gradient(-45deg,rgba(255, 255, 255, 0.3),rgba(255, 255, 255, 0.6));
+  background: transparent var(--nav-color);
   backdrop-filter: blur(28px) saturate(67%);
   transition: 0.5s ease-in-out;
 }
@@ -36,11 +36,12 @@ nav {
 nav:hover {
   width: 200px;
   transition: 0.5s ease-in-out;
-  transition-delay: 0.4s;
+  transition-delay: 0.2s;
 }
 
 .nav-button {
   display: none;
+  cursor: pointer;
 }
 
 /*? ------------------------------ Logo ------------------------------ */
@@ -48,25 +49,32 @@ nav:hover {
   display: flex;
   justify-content: center;
   margin-bottom: 100px;
-  font-size: 2em
+  font-size: 2em;
+  text-shadow: 2px 3px 2px var(--text-shadow);
+}
+
+.logo i{
+  color: var(--text-color);
 }
 
 /*? ------------------------------ Links ------------------------------ */
 .link > a > i {
   font-size: 1.7em;
+  color: var(--text-color);
   transition: 0.2s ease-in-out;
 }
 
 nav:hover .link > a > i {
   transform: scale(90%);
   transition: 0.2s ease-in-out;
-  transition-delay: 0.4s;
+  transition-delay: 0.2s;
 }
 
 .link {
 display: flex;
 align-items: center;
 margin-bottom: 15px;
+text-shadow: 2px 3px 2px var(--text-shadow);
 }
 
 .link > a:first-child {
@@ -92,17 +100,19 @@ nav .link-titel div {
   width: 200px;
   margin-left: 10px;
   opacity: 0;
+  color: var(--text-color);
   transition: 0.4s ease-in-out;
 }
 
 nav:hover .link-titel div {
   opacity: 1;
   transition: 0.4s ease-in-out;
-  transition-delay: 0.4s;
+  transition-delay: 0.2s;
 }
 
 /*? ------------------------------ Soziale Medien ------------------------------ */
 .social-links{
+  text-shadow: 2px 3px 2px var(--text-shadow);
   width: 100%;
   font-size: 1.7em;
   position: absolute;
@@ -119,31 +129,7 @@ nav:hover .link-titel div {
 nav:hover .social-links{
   opacity: 1;
   transition: 0.4s ease-in-out;
-  transition-delay: 0.4s;
-}
-
-/* ------------------------------------------------- Fontawesome ------------------------------------------------- */
-.fa-bars {
-  position: absolute;
-  opacity: 1;
-  transition: 0.3s ease-in-out;
-}
-
-nav:hover:hover .fa-bars {
-  opacity: 0;
-  transition: 0.2s ease-in-out;
-  transition-delay: 0.4s;
-}
-
-.fa-xmark {
-  opacity: 0;
-  transition: 0.2s ease-in-out;
-}
-
-nav:hover .fa-xmark {
-  opacity: 1;
-  transition: 0.2s ease-in-out;
-  transition-delay: 0.4s;
+  transition-delay: 0.2s;
 }
 
 /* ------------------------------------------------- Darkmode ------------------------------------------------- */
@@ -157,7 +143,7 @@ nav:hover .fa-xmark {
   height: 40px;
   min-height: 40px;
   padding: 5px;
-  background-color: rgba(255, 255, 255, 0.452);
+  background-color: var(--switch-color);
   backdrop-filter: blur(28px) saturate(67%);
   border-radius: 50%;
   box-shadow: 0 4px 16px rgba(0,0,0,.15);
@@ -176,7 +162,9 @@ nav:hover .fa-xmark {
   border-radius: 25px;
   width: 100%;
   height: fit-content;
-  border: 2px solid black;
+  border: 2px solid var(--secondary-color);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, 
+              rgba(0, 0, 0, 0.24) 0px 1px 2px;
   padding: 2px;
   transition: 0.1s ease-in-out;
 }
@@ -191,19 +179,17 @@ nav:hover .fa-xmark {
   min-height: 10px;
   padding: 3px;
   border-radius: 50%;
-  color: white;
-  background-color: black;
-}
-
-.switch-circle > i {
+  color: var(--text-color-secondary);
+  background-color: var(--secondary-color);
+  text-shadow: 2px 3px 2px var(--text-shadow);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, 
+              rgba(0, 0, 0, 0.24) 0px 1px 2px;
   font-size: 12px;
 }
 
-.background-switch-darkmode:hover .switch-circle{
-  animation-name: slide-to-right-hover;
-  animation-duration: 0.1s;
-  animation-fill-mode: forwards;
-}
+/* ------------------------------------------------- Fontawesome ------------------------------------------------- */
+
+
 
 /* ------------------------------------------------- Extra ------------------------------------------------- */
 .flex-center-vertical-horizontal {
@@ -212,14 +198,14 @@ nav:hover .fa-xmark {
   align-items: center;
 }
 
-@keyframes slide-to-right-hover {
-  0%   {transform: translateX(0%);}
-  100% {transform: translateX(10%);}
-}
-
 @keyframes slide-to-right-click {
   0%   {transform: translateX(0%);}
   100% {transform: translateX(100%);}
+}
+
+@keyframes slide-to-left-click {
+  0%   {transform: translateX(100%);}
+  100% {transform: translateX(0%);}
 }
 
 @keyframes rainbow {
@@ -254,7 +240,7 @@ nav:hover .fa-xmark {
 
     nav:hover {
       width: 100%;
-      transition-delay: 0.4s;
+      transition-delay: 0.2s;
     }
 
     .small-navbar {
@@ -272,14 +258,25 @@ nav:hover .fa-xmark {
 
      /** -------------------------- Button -------------------------- */
     .nav-button {
+      padding: 3px;
+      height: 22px;
+      min-height: 22px;
+      width: 22px;
+      min-width: 22px;
       display: flex;
       align-items: center;
       justify-content: center;
       position: absolute;
       right: 40px;
       font-size: 1.5em;
+      color: var(--text-color);
+      text-shadow: 2px 3px 2px var(--text-shadow);
+      background-color: var(--button-color);
+      border-radius: 7px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+      transition: 0.2s ease-in-out;
     }
-
+    
     /** -------------------------- Resposive Link -------------------------- */
     .link-background {
       z-index: -1;
@@ -288,15 +285,9 @@ nav:hover .fa-xmark {
       position: absolute;
       left: 0;
       top: -100vh;
-      background: transparent linear-gradient(-45deg,rgba(255, 255, 255, 0.3),rgba(255, 255, 255, 0.6));
+      background: transparent var(--nav-color);;
       backdrop-filter: blur(28px) saturate(67%);
       transition: 0.5s ease-in-out;
-    }
-
-    nav:hover .link-background {
-    top: 0;
-    transition: 0.5s ease-in-out;
-    transition-delay: 0.4s;
     }
 
     .link-wrapper{
@@ -320,12 +311,21 @@ nav:hover .fa-xmark {
       height: fit-content;
       align-items: center;
       overflow-y: visible;
-      background: transparent linear-gradient(-45deg,rgba(255, 255, 255, 0.3),rgba(255, 255, 255, 0.6));
+      background: transparent var(--nav-color);;
       backdrop-filter: blur(28px) saturate(67%);
       box-shadow: 4px 0 16px 0 rgba(0,0,0,.16);
     }
 
+    nav:hover .link > a > i {
+      transform: none;
+    }
+
+    nav .link-titel div {
+      opacity: 1;
+    }
+
     .social-links{
+      opacity: 1;
       bottom: 130px;
     }
 }
