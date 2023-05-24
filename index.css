@@ -132,6 +132,10 @@ nav:hover .social-links{
   transition-delay: 0.2s;
 }
 
+.social-links i{
+  color: var(--text-color);
+}
+
 /* ------------------------------------------------- Darkmode ------------------------------------------------- */
 .background-switch-darkmode {
   z-index: 51;
