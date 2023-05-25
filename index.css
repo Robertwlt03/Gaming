@@ -352,6 +352,6 @@ nav:hover .social-links{
 
     .social-links{
       opacity: 1;
-      bottom: 130px;
+      top: 80%;
     }
   }
