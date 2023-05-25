@@ -7,6 +7,8 @@
   --text-shadow: rgba(0, 0, 0, 0);
   --button-color: rgba(0, 0, 0, 0.055);
   --switch-color: rgba(255, 255, 255, 0.452);
+  --logo-color: #1f1f1f;
+  
 }
 
 .darkmode-mode {
@@ -18,6 +20,7 @@
   --text-shadow: rgba(0, 0, 0, 0.322);
   --button-color: rgba(0, 0, 0, 0.199);
   --switch-color: rgba(0, 0, 0, 0.452);
+  --logo-color: #e0e0e0;
 }
 
 * {
@@ -42,7 +45,7 @@ a {
 /* ------------------------------------------------- Navbar ------------------------------------------------- */
 nav {
   z-index: 50;
-  width: 30px;
+  width: 40px;
   height: 100vh;
   padding-top: 30px;
   padding-right: 20px;
@@ -68,18 +71,111 @@ nav:hover {
 
 /*? ------------------------------ Logo ------------------------------ */
 .logo {
+  width: 100%;
+  position: absolute;
+  left: 0;
   display: flex;
   justify-content: center;
-  margin-bottom: 100px;
   font-size: 2em;
-  text-shadow: 2px 3px 2px var(--text-shadow);
 }
 
-.logo i{
-  color: var(--text-color);
+.long-cable{
+  height: 4px;
+  width: 20px;
+  position: absolute;
+  top: 5.3px;
+  left: 0;
+  background-color: #000000;
+  transition: 0.5s ease-in-out;
+}
+
+nav:hover .long-cable{
+  width: 100px;
+  transition: 0.5s ease-in-out;
+  transition-delay: 0.2s;
+}
+
+.logo-titel{
+  position: absolute;
+  font-size: 0.55em;
+  font-weight: bold;
+  left: -80px;
+  top: 12px;
+  color: rgb(255, 0, 0);
+  text-shadow: 2px 0 var(--logo-color), -2px 0 var(--logo-color), 0 2px var(--logo-color), 0 -2px var(--logo-color),
+             1px 1px var(--logo-color), -1px -1px var(--logo-color), 1px -1px var(--logo-color), -1px 1px var(--logo-color),
+             2px 3px 2px rgba(0, 0, 0, 0.322);
+  transition: 0.5s ease-in-out;
+  
+}
+
+nav:hover .logo-titel{
+  left: 20px;
+  transition: 0.5s ease-in-out;
+  transition-delay: 0.3s;
+}
+
+.nes { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  min-width: 70px;
+  height: 40px;
+  min-height: 40px;
+}
+
+.nes .body-o{
+  fill: #e0e0e0;
+}
+
+.nes .body3D-s{
+  fill: #f0f0f0;
+}
+
+.nes .body3D-o{
+  fill: #c0c0c0;
+}
+
+.nes .body-in{
+  fill: #000000;
+}
+
+.nes .select-start-o{
+  fill: #e0e0e0;
+}
+
+.nes .select-start{
+  fill: #000000;
+}
+
+.nes .ba-o{
+  fill: #e0e0e0;
+}
+
+.nes .ba{
+  fill: #ff0000;
+}
+
+.nes .kreuz{
+  fill: #000000;
+  stroke: #e0e0e0;
+  stroke-width: 0.5px;
+}
+
+.nes .kabel{
+  fill: #000000;
+}
+
+.nes .streifen{
+  fill: #808080;
 }
 
 /*? ------------------------------ Links ------------------------------ */
+.link-wrapper{
+  margin-top: 130px;
+}
+
 .link > a > i {
   font-size: 1.7em;
   color: var(--text-color);
@@ -96,6 +192,8 @@ nav:hover .link > a > i {
 display: flex;
 align-items: center;
 margin-bottom: 15px;
+width: 32px;
+min-width: 32px;
 text-shadow: 2px 3px 2px var(--text-shadow);
 }
 
@@ -255,10 +353,10 @@ nav:hover .social-links{
         align-items: center;
         height: fit-content;
         width: 100vw;
-        padding-top: 0px;
-        padding-bottom: 0px;
-        padding-right: 0px;
-        padding-left: 0px;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-right: 0;
+        padding-left: 0;
         box-shadow: none;
         background: none;
         backdrop-filter: none;
@@ -277,9 +375,50 @@ nav:hover .social-links{
       position: relative;
     }
 
+    .nav-bg{
+      z-index: 20;
+      width: 100%;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-right: 0px;
+      padding-left: 30px;
+      display: flex;
+      height: fit-content;
+      align-items: center;
+      overflow-y: visible;
+      background: transparent var(--nav-color);;
+      backdrop-filter: blur(28px) saturate(67%);
+      box-shadow: 4px 0 16px 0 rgba(0,0,0,.16);
+    }
+    
     /** -------------------------- Logo -------------------------- */
     .logo {
-      margin-bottom: 0px;
+      margin-left: 0;
+      margin-bottom: 0;
+      font-size: 2em;
+      text-shadow: 2px 3px 2px var(--text-shadow);
+      width: auto;
+      position: relative;
+    }
+
+    .long-cable{
+      height: 3.3px;
+      width: 48px;
+      position: absolute;
+      top: 5.4px;
+      left: -35px;
+      background-color: #000000;
+      transition: 0.5s ease-in-out;
+    }
+    
+    nav:hover .long-cable{
+      width: 48px;
+      transition: 0.5s ease-in-out;
+      transition-delay: 0.2s;
+    }
+
+    .logo-titel{
+      display: none;
     }
 
      /** -------------------------- Button -------------------------- */
@@ -311,8 +450,8 @@ nav:hover .social-links{
       position: absolute;
       left: 0;
       top: -100vh;
-      background: transparent var(--nav-color);;
-      backdrop-filter: blur(28px) saturate(67%);
+      background: transparent var(--nav-color);
+      backdrop-filter: blur(2px) saturate(67%);
       transition: 0.5s ease-in-out;
     }
 
@@ -324,22 +463,7 @@ nav:hover .social-links{
       top: 100px;
       left: 25px;
       opacity: 1;
-    }
-
-    .nav-bg{
-      z-index: 20;
-      width: 100%;
-      padding-top: 5px;
-      padding-bottom: 5px;
-      padding-right: 0px;
-      padding-left: 30px;
-      display: flex;
-      height: fit-content;
-      align-items: center;
-      overflow-y: visible;
-      background: transparent var(--nav-color);;
-      backdrop-filter: blur(28px) saturate(67%);
-      box-shadow: 4px 0 16px 0 rgba(0,0,0,.16);
+      margin-top: 0;
     }
 
     nav:hover .link > a > i {
@@ -370,10 +494,10 @@ nav:hover .social-links{
         align-items: center;
         height: fit-content;
         width: 100vw;
-        padding-top: 0px;
-        padding-bottom: 0px;
-        padding-right: 0px;
-        padding-left: 0px;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-right: 0;
+        padding-left: 0;
         box-shadow: none;
         background: none;
         backdrop-filter: none;
@@ -394,7 +518,12 @@ nav:hover .social-links{
 
     /** -------------------------- Logo -------------------------- */
     .logo {
-      margin-bottom: 0px;
+      margin-left: 30px;
+      margin-bottom: 0;
+      font-size: 2em;
+      text-shadow: 2px 3px 2px var(--text-shadow);
+      width: auto;
+      position: relative;
     }
 
      /** -------------------------- Button -------------------------- */
@@ -414,7 +543,7 @@ nav:hover .social-links{
       text-shadow: 2px 3px 2px var(--text-shadow);
       background-color: var(--button-color);
       border-radius: 7px;
-      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+      box-shadow: rgba(2, 2, 3, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(0, 2, 3, 0.35) 0px -2px 6px 0px inset;
       transition: 0.2s ease-in-out;
     }
     
@@ -426,8 +555,8 @@ nav:hover .social-links{
       position: absolute;
       left: 0;
       top: -100vh;
-      background: transparent var(--nav-color);;
-      backdrop-filter: blur(28px) saturate(67%);
+      background: transparent var(--nav-color);
+      backdrop-filter: blur(2px) saturate(67%);
       transition: 0.5s ease-in-out;
     }
 
@@ -440,6 +569,7 @@ nav:hover .social-links{
       top: 100px;
       left: 0;
       opacity: 1;
+      margin-top: 0;
     }
 
     .nav-bg{
@@ -453,7 +583,7 @@ nav:hover .social-links{
       height: fit-content;
       align-items: center;
       overflow-y: visible;
-      background: transparent var(--nav-color);;
+      background: transparent var(--nav-color);
       backdrop-filter: blur(28px) saturate(67%);
       box-shadow: 4px 0 16px 0 rgba(0,0,0,.16);
     }
