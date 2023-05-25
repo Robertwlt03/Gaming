@@ -2,6 +2,9 @@
 const navDropdown = document.querySelector(".link-background");
 const navButton = document.querySelector(".nav-button");
 
+
+navDropdown.style.top = "-100vh";
+
 function exitNavbar (){
     if (navDropdown.style.top === "-100vh") {
         navDropdown.style.top = "0";
