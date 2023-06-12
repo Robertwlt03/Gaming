@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+html, 
+body{
+    width: 100%;
+    height: 100vh;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.exit{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-decoration: none;
+    color: initial;
+    transition: 0.2s ease-in;
+}
+
+.exit:hover{
+    text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.322);
+    transition: 0.2s ease-in;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: 100px 300px 100px;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: "logo header header"
+                         "main main aside "
+                         "footer footer footer";
+    grid-gap: 10px;
+
+
+    min-width: 10vw;
+    background-color: rgba(136, 136, 255, 0.541);
+    border: 5px solid black;
+    border-radius: 5px;
+}
+
+.grid-element{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 80px;
+    font-size: 1.3em;
+    background-color: rgb(136, 136, 255);
+    padding: 10px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, .15);
+}
+
+.grid-element:first-of-type{
+    grid-area: footer;
+}
+
+.grid-element:nth-of-type(2){
+    grid-area: main;
+}
+
+.grid-element:nth-of-type(3){
+    grid-area: aside;
+}
+
+.grid-element:nth-of-type(4){
+    grid-area: header;
+} 
+
+.grid-element:nth-of-type(5){
+    grid-area: logo;
+} 
