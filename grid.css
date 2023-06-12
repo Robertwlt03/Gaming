@@ -82,7 +82,7 @@ html{
 .grid-aside-element{
     background-color: rgb(144, 255, 69);
     padding: 10px;
-    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, .15);
+    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.295);
 } 
 
 .note-date{
