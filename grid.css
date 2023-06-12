@@ -15,7 +15,7 @@
                          "footer footer footer";
     gap: 10px;
 
-    height: fit-content;
+    height: 100vh;
     background-color: rgba(136, 136, 255, 0.541);
 }
 
