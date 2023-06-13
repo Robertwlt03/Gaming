@@ -23,7 +23,7 @@ html, body{
     height: 70vh;
     background-color: #20242d;
     border-radius: 25px;
-    box-shadow: rgba(0, 0, 0, 0.349) 0px 22px 70px 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 30px 30px;
 
     display: grid;
     grid-template-rows: 100px auto;
@@ -96,6 +96,7 @@ html, body{
 
 .card-main-content:nth-of-type(6):hover{
     transform: scale(105%);
+    box-shadow: rgba(0, 225, 255, 0.16) 0px 0px 6px 3px, rgb(0, 225, 255, 0.24) 0px 0px 6px 3px;
     transition: 0.1s ease-in;
 }
 
