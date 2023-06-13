@@ -34,7 +34,7 @@ html {
 }
 
 body{
-  background-image: url("/img/paper.gif");
+  background-image: url("paper.gif");
 }
 
 a {
