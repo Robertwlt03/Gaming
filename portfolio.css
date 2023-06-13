@@ -90,10 +90,17 @@ html, body{
     border-radius: 25px;
     box-shadow: rgba(0, 225, 255, 0.16) 0px 3px 6px, rgb(0, 225, 255, 0.24) 0px 3px 6px;
     color: #20242d;
+    cursor: pointer;
+    transition: 0.1s ease-in;
+}
+
+.card-main-content:nth-of-type(6):hover{
+    transform: scale(105%);
+    transition: 0.1s ease-in;
 }
 
 .fa-brands{
-   color: rgb(0, 225, 255);;
+   color: rgb(0, 225, 255);
 }
 
 .circle:hover .fa-brands{
