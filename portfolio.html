@@ -8,17 +8,31 @@
     <link rel="stylesheet" href="portfolio.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet"> 
     <title>Portfolio Design</title>
 </head>
 <body>
     <div class="portfolio">
         <div class="portfolio-card">
-            <div class="card-content"><h2>Portfolio.</h2></div>
+            <!--? Header Content-->
+            <div class="card-content"><h3>Portfolio.</h3></div>
+            
+            <!--? Navbar Content-->
             <div class="card-content">
-                <div class="card-main-content"><h3>Hello, it's me</h3></div>
-                <div class="card-main-content"><h1>Max Mustermann</h1></div>
-                <div class="card-main-content"><h3>I'm a <span class="cyan">Frontend Developer</span></h3></div>
+                <a href="index.html" class="card-navbar-content">Home</a>
+                <a href="" class="card-navbar-content">About</a>
+                <a href="" class="card-navbar-content">Skills</a>
+                <a href="portfolio.html" class="card-navbar-content selected">Portfolio</a>
+                <a href="" class="card-navbar-content">Contact</a>
+            </div>
+
+            <!--? Main Content-->
+            <div class="card-content">
+
+                <!--? Intruduction Content-->
+                <div class="card-main-content"><h2>Hello, It's Me</h2></div>
+                <div class="card-main-content"><h1>Robert Walter</h1></div>
+                <div class="card-main-content"><h2>And I'm a <span class="neon-blue">Frontend Developer</span></h2></div>
 
                 <div class="card-main-content">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt eos, est quod totam, 
@@ -26,6 +40,7 @@
                     laudantium placeat eaque! Deserunt dolores officia in!
                 </div>
 
+                <!--? Social Links-->
                 <div class="card-main-content">
                     <a href="" class="circle">
                         <div class="card-main-links">
@@ -52,8 +67,13 @@
                     </a>
 
                 </div>
-
+                <!--? Button-->
                 <div class="card-main-content">Jetzt Drucken</div>
+            </div>
+
+            <!--? Image -->
+            <div class="card-content">
+                <img src="flame.png" class="card-img"></img>
             </div>
         </div>
     </div>
